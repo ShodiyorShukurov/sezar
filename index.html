@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Sezar Shifrlash Usuli</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="row justify-content-center mb-3">
+        <div class="col-12 text-center">
+          <a href="/" class="link mr-2"> Matni shifrlash </a>
+          <a href="./aslmatn.html" class="link">
+            Shifr matni ortga qaytarish
+          </a>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="card">
+            <div class="card-header text-center text-white bg-info">
+              <h3>Sezar shifrlash usuli</h3>
+              <span>(Asl matnni shifrmatnga aylantirish)</span>
+            </div>
+            <div class="card-body">
+              <p class="mb-4">
+                <strong>Sezar shifrlash usuli</strong> — qadimgi Rim sarkardasi
+                Yuliy Sezar tomonidan qo'llangan shifrlash usuli bo'lib, bu
+                usulda matndagi har bir harf ma'lum son (kalit) qiymatiga
+                siljitiladi. Misol uchun, agar kalit 3 bo'lsa, "A" harfi "D" ga,
+                "B" esa "E" ga o'zgaradi. Bu usul matnni shifrlashning oddiy va
+                samarali yo‘li hisoblanadi.
+              </p>
+
+              <form
+                class="needs-validation g-3"
+                novalidate
+                onsubmit="return false;"
+              >
+                <div class="form-group">
+                  <label for="validationOriginalText" class="form-label"
+                    >Asl matn:</label
+                  >
+                  <textarea
+                    class="form-control"
+                    rows="4"
+                    id="validationOriginalText"
+                    placeholder="Shifrlash kerak bo'lgan matnni kiriting"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">
+                    Iltimos shifrlash kerak bo'lgan matni kiriting
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="kalit">Kalit:</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    id="kalit"
+                    placeholder="Kalitni kiriting"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Iltimos shifrlash uchun kalitni kiriting
+                  </div>
+                </div>
+
+                <button
+                  class="btn btn-primary"
+                  onclick="shifrlash()"
+                  type="submit"
+                >
+                  Shifrlash
+                </button>
+
+                <div class="form-group mt-5">
+                  <label for="shifrlanganText">Shifrlangan matn:</label>
+                  <textarea
+                    class="form-control"
+                    rows="4"
+                    id="shifrlanganText"
+                    readonly
+                    placeholder="Shifrlangan matn bu yerda ko'rsatiladi"
+                  ></textarea>
+                </div>
+                <button class="btn btn-secondary" onclick="nusxalash()">
+                  Matndan nusxa olish
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center mt-5 py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>
+              © 2024 Sezar Shifrlash Usuli Loyihasi. Barcha huquqlar
+              himoyalangan.
+            </p>
+            <p>
+              Bu loyiha ma'lumotni shifrlash va ma'lumot xavfsizligini
+              ta'minlash maqsadida yaratilgan.
+            </p>
+            <p>Built with by Shukurov Shodiyor</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/shifrlash.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
